@@ -4,6 +4,7 @@ set -e
 set -o pipefail
 set -o nounset
 
+# shellcheck source=/dev/null
 test -f .envrc && source .envrc
 
 # shellcheck source=/dev/null

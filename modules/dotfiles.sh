@@ -50,7 +50,7 @@ rsync --exclude ".git/" \
     --exclude ".oh-my-zsh" \
     --exclude "*.md" \
     --exclude "*.txt" \
-    -avh --no-perms . $HOME/
+    -avh --no-perms . "$HOME/"
 popd >/dev/null
 log_ok
 

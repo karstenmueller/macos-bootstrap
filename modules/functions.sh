@@ -57,22 +57,18 @@ sudo_refresh() {
 }
 
 abort() {
-    STRAP_STEP=""
     echo "!!! $*" >&2
     exit 1
 }
 log() {
-    STRAP_STEP="$*"
     sudo_refresh
     echo "--> $*"
 }
 log_start() {
-    STRAP_STEP="$*"
     sudo_refresh
     printf -- "--> %s " "$*"
 }
 log_ok() {
-    STRAP_STEP=""
     echo "OK"
 }
 escape() {

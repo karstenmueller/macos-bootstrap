@@ -34,11 +34,3 @@ if [ -f "$HOME/.Brewfile" ]; then
     brew bundle check --global || brew bundle --global
     log_ok
 fi
-
-# Tap a custom Homebrew tap
-if [ -n "$CUSTOM_HOMEBREW_TAP" ]; then
-    read -ra CUSTOM_HOMEBREW_TAP <<<"$CUSTOM_HOMEBREW_TAP"
-    log "Running 'brew tap ${CUSTOM_HOMEBREW_TAP[*]}':"
-    brew tap "${CUSTOM_HOMEBREW_TAP[@]}"
-    log_ok
-fi

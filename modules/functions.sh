@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+SUDO_ASKPASS=""
+
 sudo_askpass() {
-    if [ -n "$SUDO_ASKPASS" ]; then
+    if [ -f "$SUDO_ASKPASS" ]; then
         sudo --askpass "$@"
     else
         sudo "$@"
@@ -11,7 +13,7 @@ sudo_askpass() {
 cleanup() {
     set +e
     sudo_askpass rm -rf "$CLT_PLACEHOLDER" "$SUDO_ASKPASS" "$SUDO_ASKPASS_DIR"
-    sudo --reset-timestamp
+    # sudo --reset-timestamp
 }
 
 # Initialise (or reinitialise) sudo to save unhelpful prompts later.
@@ -47,7 +49,7 @@ BASH
 }
 
 sudo_refresh() {
-    if [ -n "$SUDO_ASKPASS" ]; then
+    if [ -f "$SUDO_ASKPASS" ]; then
         sudo --askpass --validate
     else
         sudo_init

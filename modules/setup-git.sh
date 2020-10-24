@@ -27,7 +27,7 @@ if ! git config push.default >/dev/null; then
 fi
 
 # Setup GitHub HTTPS credentials.
-if git credential-osxkeychain 2>&1 | grep -q "git.credential-osxkeychain"; then
+if ! git credential-osxkeychain 2>&1 | grep -q "git credential-osxkeychain"; then
     if [ "$(git config --global credential.helper)" != "osxkeychain" ]; then
         git config --global credential.helper osxkeychain
     fi
@@ -39,4 +39,8 @@ if git credential-osxkeychain 2>&1 | grep -q "git.credential-osxkeychain"; then
             git credential-osxkeychain store
     fi
 fi
+
+# configure git on macOS to properly handle line endings
+git config --global core.autocrlf input
+
 log_ok

@@ -42,17 +42,5 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
     fi
 fi
 
-pushd ~/.dotfiles >/dev/null
-log "--> syncing ~/.dotfiles to $HOME/"
-rsync --exclude ".git/" \
-    --exclude ".DS_Store" \
-    --exclude "script/" \
-    --exclude ".oh-my-zsh" \
-    --exclude "*.md" \
-    --exclude "*.txt" \
-    -avh --no-perms . "$HOME/"
-popd >/dev/null
-log_ok
-
 run_dotfile_scripts script/setup script/bootstrap
 log_ok

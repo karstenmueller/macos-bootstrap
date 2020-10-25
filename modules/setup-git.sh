@@ -42,5 +42,11 @@ fi
 
 # configure git on macOS to properly handle line endings
 git config --global core.autocrlf input
+# rebase local changes to avoid merge commits (if local and remote are changed simultaneously)
+git config --global pull.rebase true
+# create stashes as necessary (needs 'pull.rebase true')
+git config --global rebase.autoStash true
+# make push default to current branch
+git config --global push.default current
 
 log_ok

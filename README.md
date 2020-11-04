@@ -16,7 +16,7 @@ OK
 --> Your system is now bootstrap'd
 ~~~
 
-You may want to configure variables in a `.envrc` file which is used by direnv(1).
+You may want to configure variables in a `.envrc` file which is sourced by run.sh. See also direnv(1).
 
 ## Optional
 

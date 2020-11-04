@@ -19,5 +19,5 @@ You may want to configure variables in a `.envrc` file which is used by direnv(1
 
 A `Brewfile` for installing software packages and `dotfiles` will be used from personal GitHub repositories if available:
 
-- Brewfile will be used from repository https://github.com/\<username\>/homebrew
-- Dotfiles will be used from repository https://github.com/\<username\>/dotfiles
+- Brewfile will be used from repository https://github.com/$STRAP_GITHUB_USER/homebrew
+- Dotfiles will be used from repository https://github.com/$STRAP_GITHUB_USER/dotfiles

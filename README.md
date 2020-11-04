@@ -6,27 +6,18 @@ Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
 ~~~shell
 git clone https://github.com/karstenmueller/macos-bootstrap.git
-bash macos-bootstrap/run.sh
-~~~
-
-## Prerequisites
-
-### Mandatory
-
-These enironment variables are required:
-
-~~~shell
 export STRAP_GIT_NAME='Jane Doe'
 export STRAP_GIT_EMAIL='jane@doe.com'
 export STRAP_GITHUB_USER='janedoe'
 export STRAP_GITHUB_TOKEN='6b7b09576b13ca10ba4b810gc0c518b86f613ac8'
+bash macos-bootstrap/run.sh
 ~~~
 
 You may want to configure variables in a `.envrc` file which is used by direnv(1).
 
-### Optional
+## Optional
 
-A `Brewfile` for installing software packages and dotfiles will be used if personal GitHub repositories are present:
+A `Brewfile` for installing software packages and `dotfiles` will be used from personal GitHub repositories if available:
 
 - Brewfile will be used from repository https://github.com/<username>/homebrew
 - Dotfiles will be used from repository https://github.com/<username>/dotfiles

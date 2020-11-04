@@ -4,11 +4,13 @@ set -e
 set -o pipefail
 set -o nounset
 
-# shellcheck source=/dev/null
-test -f .envrc && source .envrc
+DIR="$(dirname "${BASH_SOURCE[0]}")"
 
 # shellcheck source=/dev/null
-source "$(dirname "${BASH_SOURCE[0]}")"/modules/functions.sh
+test -f $DIR/.envrc && source $DIR/.envrc
+
+# shellcheck source=/dev/null
+source $DIR/modules/functions.sh
 
 export CLT_PLACEHOLDER=""
 export SUDO_ASKPASS=""

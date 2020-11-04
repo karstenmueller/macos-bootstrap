@@ -45,8 +45,8 @@ modules=(
     setup-git
     oh-my-zsh
     dotfiles
-    brewfile
     homebrew
+    brewfile
     misc
 )
 

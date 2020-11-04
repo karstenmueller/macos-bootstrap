@@ -42,5 +42,6 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
     fi
 fi
 
+# User context
 run_dotfile_scripts script/setup script/bootstrap
 log_ok

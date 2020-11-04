@@ -2,6 +2,13 @@
 
 Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
+## Usage
+
+~~~shell
+git clone https://github.com/karstenmueller/macos-bootstrap.git
+bash macos-bootstrap/run.sh
+~~~
+
 ## Prerequisites
 
 ### Mandatory

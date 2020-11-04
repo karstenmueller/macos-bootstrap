@@ -20,7 +20,7 @@ STDIN_FILE_DESCRIPTOR="0"
 export STRAP_INTERACTIVE
 
 # required env vars
-trap "echo '--> Required environment variables missing!'" EXIT
+trap "echo '--> Required environment variable missing!'" EXIT
 STRAP_GIT_NAME=$(printenv STRAP_GIT_NAME)
 STRAP_GIT_EMAIL=$(printenv STRAP_GIT_EMAIL)
 STRAP_GITHUB_USER=$(printenv STRAP_GITHUB_USER)
@@ -45,6 +45,7 @@ modules=(
     dotfiles
     homebrew
     brewfile
+    misc
 )
 
 for module in "${modules[@]}"; do

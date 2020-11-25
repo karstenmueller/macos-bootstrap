@@ -2,6 +2,12 @@
 
 Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
+You may want to use the latest macOS version:
+
+~~~shell
+sudo softwareupdate --fetch-full-installer --restart
+~~~
+
 ## Usage
 
 Fork this repository and consider pull requests if you change something to the better 😉

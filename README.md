@@ -4,6 +4,8 @@ Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
 ## Usage
 
+Fork this repository and lease consider pull requests 😉
+
 ~~~shell
 git clone https://github.com/karstenmueller/macos-bootstrap.git
 export STRAP_GIT_NAME='Jane Doe'
@@ -16,7 +18,7 @@ OK
 --> Your system is now bootstrap'd
 ~~~
 
-You may want to configure variables in a `.envrc` file which is sourced by run.sh. See also direnv(1).
+You may want to configure these variables in a `.envrc` file which is sourced by run.sh like direnv(1) does it.
 
 ## Optional
 

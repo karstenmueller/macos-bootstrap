@@ -4,7 +4,7 @@ Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
 ## Usage
 
-Fork this repository and lease consider pull requests 😉
+Fork this repository and consider pull requests if you change something to the better 😉
 
 ~~~shell
 git clone https://github.com/karstenmueller/macos-bootstrap.git

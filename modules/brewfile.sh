@@ -23,7 +23,7 @@ if [ -n "$STRAP_GITHUB_USER" ] && { [ ! -f "$HOME/.Brewfile" ] || [ "$HOME/.Brew
                 git pull -q
             )
         fi
-        ln -sf ~/.homebrew/Brewfile ~/.Brewfile
+        ln -sf ~/.homebrew/.Brewfile ~/.Brewfile
         log_ok
     fi
 fi

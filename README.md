@@ -2,11 +2,7 @@
 
 Bootstrap a fresh install of macOS (tested with macOS Big Sur)
 
-You may want to use the latest macOS version:
-
-~~~shell
-sudo softwareupdate --fetch-full-installer --restart
-~~~
+You may want to use the latest macOS version, run "Software Update" App
 
 ## Usage
 

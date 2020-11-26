@@ -47,6 +47,7 @@ modules=(
     dotfiles
     homebrew
     brewfile
+    bindir
     misc
 )
 

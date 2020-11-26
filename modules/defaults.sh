@@ -32,6 +32,9 @@ sudo_askpass launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.pl
 # location for Screenshots
 defaults write com.apple.screencapture location ~/Downloads
 
+# no fancy windows minimize effect
+defaults write com.apple.dock mineffect -string scale
+
 # autohide Dock
 defaults write com.apple.dock autohide -bool true
 

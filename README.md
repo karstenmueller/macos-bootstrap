@@ -24,8 +24,8 @@ You may want to configure these variables in a `.envrc` file which is sourced by
 
 ## Optional
 
-A `Brewfile` for installing software packages and `dotfiles` will be used from personal GitHub repositories if available:
+You may want to keep at least your dotfiles in GitHub repositories. Also tools and homebrew packages could be kept there. Beside other advantages the bootstrap will use these repositories as sources for installation.
 
-- Brewfile will be used from repository https://github.com/$STRAP_GITHUB_USER/homebrew
-- Dotfiles will be used from repository https://github.com/$STRAP_GITHUB_USER/dotfiles
-- Scripts and the like will be used from repository https://github.com/$STRAP_GITHUB_USER/bin
+- Dotfiles will be used from repository https://github.com/$STRAP_GITHUB_USER/dotfiles and cloned into $HOME/.dotfiles
+- Tools and scripts and the like will be used from repository https://github.com/$STRAP_GITHUB_USER/bin and cloned into $HOME/.bin
+- Homebrew related things will be used from repository https://github.com/$STRAP_GITHUB_USER/homebrew and cloned into $HOME/.homebrew

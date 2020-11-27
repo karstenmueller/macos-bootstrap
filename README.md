@@ -28,3 +28,4 @@ A `Brewfile` for installing software packages and `dotfiles` will be used from p
 
 - Brewfile will be used from repository https://github.com/$STRAP_GITHUB_USER/homebrew
 - Dotfiles will be used from repository https://github.com/$STRAP_GITHUB_USER/dotfiles
+- Scripts and the like will be used from repository https://github.com/$STRAP_GITHUB_USER/bin

@@ -39,6 +39,8 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
             )
         fi
         log_ok
+    else
+        abort "dotfile repo '$DOTFILES_URL' not reachable"
     fi
 fi
 

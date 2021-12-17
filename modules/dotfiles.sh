@@ -35,7 +35,7 @@ if [ -n "$STRAP_GITHUB_USER" ]; then
         else
             (
                 cd ~/.dotfiles
-                git pull -q --rebase --autostash main origin
+                git pull -q --rebase --autostash
             )
         fi
         log_ok

@@ -26,7 +26,7 @@ HOMEBREW_REPOSITORY="$(brew --repository 2>/dev/null || true)"
 [ -d "$HOMEBREW_REPOSITORY" ] || sudo_askpass mkdir -p "$HOMEBREW_REPOSITORY"
 sudo_askpass chown -R "$USER:admin" "$HOMEBREW_REPOSITORY"
 
-if [ $HOMEBREW_PREFIX != $HOMEBREW_REPOSITORY ]; then
+if [ "$HOMEBREW_PREFIX" != "$HOMEBREW_REPOSITORY" ]; then
     ln -sf "$HOMEBREW_REPOSITORY/bin/brew" "$HOMEBREW_PREFIX/bin/brew"
 fi
 
@@ -46,11 +46,9 @@ log "Updating Homebrew:"
 brew update
 log_ok
 
-# Install Homebrew Bundle, Cask and Services tap.
-log "Installing Homebrew taps and extensions:"
-brew bundle --file=- <<RUBY
-tap 'homebrew/cask'
-tap 'homebrew/core'
-tap 'homebrew/services'
-RUBY
-log_ok
+# Install from Brewfile
+if [ -e "$HOME/.Brewfile" ]; then
+    log "Installing from Brewfile:"
+    brew bundle check --global || brew bundle --global
+    log_ok
+fi

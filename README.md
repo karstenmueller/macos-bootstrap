@@ -1,7 +1,6 @@
 # macOS bootstrap
 
-Bootstrap macOS (tested with macOS 12.4 Monterey) to make it your working environment.
-You may want to use the latest macOS version, run "Software Update" App.
+Bootstrap your macOS (tested from macOS versions 12.4 to 13.5) to make it your $HOME.
 
 Bootstrap will do these things for you:
 
